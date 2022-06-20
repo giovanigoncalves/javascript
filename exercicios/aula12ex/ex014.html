@@ -5,80 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-            text-shadow: 1px 1px 1px black;
-        }
-
-        h2 {
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 10px;
-        }
-
-        main {
-            position: relative;
-            max-width: 400px;
-            min-height: 250px;
-            background-color: white;
-            margin: auto;
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px black #f09f09;
-        }
-        main > div {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, -5%);
-        }
-    </style>
+    <link rel="stylesheet" href="style_14.css">
 
 </head>
-<body id="corpo">
+<body onload="day()">
     <header>
         <h1>Hora do Dia</h1>
     </header>
 
     <main id="main">
-        <h2 id="hour"></h2>
-        <div id="img"></div>     
+        <div id="hour">
+            
+        </div>
+        <div id="img">
+            <img src="imagens/amanhecer.png" alt="foto">
+        </div>
+           
     </main>
 
-    <script>
-        // Texto para a hora atual
-        var agora = new Date()
-        var hora = agora.getHours()
-        var minutos = agora.getMinutes()
-        
-        var hourText = window.document.getElementById('hour')
-        hourText.innerText += `Agora são ${hora}:${minutos} h.`
-
-        // Configurações do estilo e imagem
-        var img = window.document.getElementById('img')
-        var body = window.document.getElementById('corpo')
-        if (hora < 5) {
-            body.style.background = '#383838'
-            img.innerHTML = '<img src="imagens/madrugada1.jpg" alt="madrugada">'       
-        } else if (hora <= 6) {
-            body.style.background = '#f09f09'
-            img.innerHTML = '<img src="imagens/amanhecer.png" alt="amanhecer">' 
-        }  else if (hora <= 16) {
-            body.style.background = '#FFF429'
-            img.innerHTML = '<img src="imagens/dia.png" alt="dia">'
-        }  else if (hora <= 18) {
-            body.style.background = '#C95A0B'
-            img.innerHTML = '<img src="imagens/entardecer.png" alt="entardecer">' 
-        } else {
-            body.style.background = '#3A3B3A'
-            img.innerHTML = '<img src="imagens/noite.png" alt="noite">'
-        }
-    </script>
-
+<script src="script_14.js"></script>
 </body>
 </html>
