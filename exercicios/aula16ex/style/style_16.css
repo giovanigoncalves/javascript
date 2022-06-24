@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(87, 87, 240);
+}
+
+header > h1 {
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.295);
+}
+
+section {
+    margin: auto;
+    background-color: aliceblue;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.336);
+}
+
+select {
+    min-width: 150px;
+    margin-top: 10px;
+}
